@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d5f77" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Stuhl Thai Chi" />
+  <title>Stuhl Thai Chi</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="introView" class="view active intro-view" aria-label="Startbildschirm">
+      <button id="introStartBtn" class="intro-touch" type="button" aria-label="App starten">
+        <img src="assets/startbild.png" alt="Startbildschirm von Stuhl Thai Chi" class="intro-image" />
+        <span class="intro-cta">Zum Start antippen</span>
+      </button>
+    </section>
+
+    <section id="overviewView" class="view" aria-label="Programmübersicht">
+      <header class="topbar">
+        <div>
+          <div class="brand">Stuhl Thai Chi</div>
+          <div class="subline">Morgenprogramm · V1.1.2 · Everlast Edition · 18 Übungen</div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="helpBtn" type="button" aria-label="Bedienungsanleitung">?</button>
+          <button class="icon-btn" id="settingsBtn" type="button" aria-label="Einstellungen">⚙︎</button>
+        </div>
+      </header>
+
+      <section class="builder-card" aria-labelledby="builderTitle">
+        <div class="section-head">
+          <div>
+            <h1 id="builderTitle">Dein Training – deine Wahl</h1>
+            <p>Bereich wählen, Zeit festlegen und die App stellt automatisch ein passendes Programm zusammen.</p>
+          </div>
+          <span class="pill">2-Min.-Automatik</span>
+        </div>
+
+        <div class="builder-block">
+          <h2>Körperbereich / Ziel</h2>
+          <div id="targetGrid" class="choice-grid target-grid" role="group" aria-label="Körperbereich wählen">
+            <button class="choice-card selected" type="button" data-target="all"><span class="choice-icon">◎</span><strong>Ganzkörper</strong><small>Kraft · Mobilität · Kreislauf</small></button>
+            <button class="choice-card" type="button" data-target="back"><span class="choice-icon">↟</span><strong>Rücken</strong><small>Haltung · Rumpf</small></button>
+            <button class="choice-card" type="button" data-target="shoulders"><span class="choice-icon">⌁</span><strong>Schulter & Nacken</strong><small>Lockerung · Kraft</small></button>
+            <button class="choice-card" type="button" data-target="legs"><span class="choice-icon">↥</span><strong>Beine & Hüfte</strong><small>Stabilität · Alltag</small></button>
+            <button class="choice-card" type="button" data-target="mobility"><span class="choice-icon">∞</span><strong>Beweglichkeit</strong><small>Dehnung · Mobilität</small></button>
+            <button class="choice-card" type="button" data-target="activation"><span class="choice-icon">♥</span><strong>Aktivierung</strong><small>Kreislauf · Energie</small></button>
+          </div>
+        </div>
+
+        <div class="builder-options">
+          <div class="builder-block compact-block">
+            <h2>Programmdauer</h2>
+            <div class="segmented" id="durationChooser">
+              <button type="button" data-minutes="5">5 Min.</button>
+              <button type="button" class="selected" data-minutes="10">10 Min.</button>
+              <button type="button" data-minutes="15">15 Min.</button>
+            </div>
+          </div>
+          <div class="builder-block compact-block">
+            <h2>Hilfsmittel</h2>
+            <div class="tool-choices" id="toolChooser">
+              <label><input type="checkbox" value="none" checked><span>Ohne</span></label>
+              <label><input type="checkbox" value="band" checked><span>Theraband</span></label>
+              <label><input type="checkbox" value="dumbbell" checked><span>Hanteln</span></label>
+              <label><input type="checkbox" value="other" checked><span>Sonstiges</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="builder-summary" id="builderSummary">10 Minuten · ca. 5 Übungen · Ganzkörper</div>
+        <button id="buildProgramBtn" class="primary-btn wide" type="button">▶ Mein Programm starten</button>
+      </section>
+
+      <section class="original-plan">
+        <div class="section-head mini-head">
+          <div>
+            <h2>Das ursprüngliche Morgenprogramm</h2>
+            <p>Die acht Felder im Bild bleiben direkt anklickbar.</p>
+          </div>
+        </div>
+        <div class="overview-wrap" id="overviewWrap">
+          <img src="assets/00_uebersicht.webp" alt="Übersicht des Stuhl-Tai-Chi Morgenprogramms mit acht Übungen" class="overview-image" />
+          <div class="hotspots" aria-label="Übungen auswählen">
+            <button class="hotspot h1" data-index="0" aria-label="Übung 1 Aufrichten und Bauchatmung"></button>
+            <button class="hotspot h2" data-index="1" aria-label="Übung 2 Nacken und Schulterkreise"></button>
+            <button class="hotspot h3" data-index="2" aria-label="Übung 3 Wolkenhände im Sitzen"></button>
+            <button class="hotspot h4" data-index="3" aria-label="Übung 4 Brust öffnen und Ellbogen zurückziehen"></button>
+            <button class="hotspot h5" data-index="4" aria-label="Übung 5 Sitzende Rumpfdrehung"></button>
+            <button class="hotspot h6" data-index="5" aria-label="Übung 6 Sitzendes Marschieren mit Armzug"></button>
+            <button class="hotspot h7" data-index="6" aria-label="Übung 7 Knieheben mit Beinstreckung"></button>
+            <button class="hotspot h8" data-index="7" aria-label="Übung 8 Seitbeuge und Diagonalzug"></button>
+          </div>
+        </div>
+        <div class="overview-actions">
+          <button id="startProgramBtn" class="secondary-strong-btn" type="button">▶ Klassisches 8er-Programm starten</button>
+        </div>
+      </section>
+
+      <section class="library-section" aria-labelledby="libraryTitle">
+        <div class="section-head mini-head">
+          <div>
+            <h2 id="libraryTitle">Alle Übungen</h2>
+            <p>18 Übungen – davon 10 neu mit Theraband, Hanteln oder zusätzlicher Kräftigung.</p>
+          </div>
+        </div>
+        <div id="exerciseLibrary" class="exercise-library"></div>
+      </section>
+
+      <aside class="safety-note">
+        <strong>Sicher trainieren:</strong> stabilen Stuhl ohne Rollen verwenden, Widerstand leicht wählen, langsam und schmerzfrei bewegen. Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.
+      </aside>
+    </section>
+
+    <section id="exerciseView" class="view" aria-label="Übungsansicht">
+      <header class="exercise-header">
+        <button id="backBtn" class="text-btn" type="button">‹ Übersicht</button>
+        <div class="exercise-meta">
+          <strong id="exerciseCounter">1 / 8</strong>
+          <span id="exerciseTitle">Aufrichten & Bauchatmung</span>
+        </div>
+        <button id="fullscreenBtn" class="icon-btn" type="button" aria-label="Vollbild">⛶</button>
+      </header>
+
+      <div class="timer-card">
+        <div class="timer-topline">
+          <span id="timerLabel">Automatisch weiter in</span>
+          <strong id="timerText">02:00</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+
+      <div id="classicExerciseWrap" class="exercise-image-wrap">
+        <img id="exerciseImage" src="assets/01_aufrichten_bauchatmung.webp" alt="Übung 1" class="exercise-image" />
+      </div>
+
+      <article id="detailExerciseWrap" class="detail-exercise" hidden>
+        <div class="detail-hero">
+          <img id="detailImage" alt="Übung" />
+          <div class="detail-copy">
+            <div id="detailBadge" class="equipment-badge">Theraband</div>
+            <h2 id="detailTitle">Übung</h2>
+            <p id="detailPurpose"></p>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <section><h3>So geht’s</h3><ol id="detailSteps"></ol></section>
+          <section><h3>Worauf achten</h3><ul id="detailFocus"></ul></section>
+          <section><h3>Stärkt</h3><ul id="detailStrengthens"></ul></section>
+          <section><h3>Mobilisiert / dehnt</h3><ul id="detailMobilizes"></ul></section>
+        </div>
+      </article>
+
+      <nav class="exercise-controls" aria-label="Übungssteuerung">
+        <button id="prevBtn" class="secondary-btn" type="button">‹ Zurück</button>
+        <button id="pauseBtn" class="primary-btn compact" type="button">Ⅱ Pause</button>
+        <button id="nextBtn" class="secondary-btn" type="button">Weiter ›</button>
+      </nav>
+    </section>
+
+
+    <div id="helpPanel" class="modal" hidden>
+      <div class="modal-card help-card" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+        <div class="modal-head help-head">
+          <div>
+            <div class="help-kicker">STUHL THAI CHI</div>
+            <h2 id="helpTitle">Bedienungsanleitung</h2>
+          </div>
+          <button id="closeHelpBtn" class="icon-btn" type="button" aria-label="Schließen">×</button>
+        </div>
+
+        <div class="help-hero">
+          <strong>Beweglich · Stark · Entspannt</strong>
+          <span>Dein kurzer Leitfaden für ein sicheres und einfaches Training.</span>
+        </div>
+
+        <div class="help-scroll">
+          <section class="help-section">
+            <h3>🚀 Schnellstart</h3>
+            <ol>
+              <li>Auf dem Startbild <b>„Zum Start antippen“</b>.</li>
+              <li>Körperbereich auswählen oder <b>Ganzkörper</b> lassen.</li>
+              <li><b>5, 10 oder 15 Minuten</b> wählen.</li>
+              <li>Hilfsmittel aktivieren.</li>
+              <li><b>„Mein Programm starten“</b> antippen.</li>
+            </ol>
+          </section>
+
+          <section class="help-section">
+            <h3>🎯 Trainingsbereiche</h3>
+            <div class="help-chip-grid">
+              <span>◎ Ganzkörper</span><span>↟ Rücken</span><span>⌁ Schulter & Nacken</span>
+              <span>↥ Beine & Hüfte</span><span>∞ Beweglichkeit</span><span>♥ Aktivierung</span>
+            </div>
+          </section>
+
+          <section class="help-section">
+            <h3>⏱ Automatik</h3>
+            <p>Standardmäßig läuft jede Übung 2 Minuten. Bei 5-/10-/15-Minuten-Programmen wird die letzte Übung bei Bedarf automatisch verkürzt.</p>
+          </section>
+
+          <section class="help-section">
+            <h3>🧰 Hilfsmittel</h3>
+            <p>Du kannst Programme ohne Hilfsmittel oder mit Theraband, leichten Hanteln und weiteren einfachen Varianten zusammenstellen.</p>
+          </section>
+
+          <section class="help-section">
+            <h3>▶ Während des Trainings</h3>
+            <p><b>Zurück</b> · <b>Pause/Weiter</b> · <b>Weiter</b> · <b>Vollbild</b>. Der Countdown zeigt dir, wann die nächste Übung automatisch startet.</p>
+          </section>
+
+          <section class="help-section">
+            <h3>🪑 Klassisches 8er-Programm</h3>
+            <p>Die acht Felder im Übersichtsbild sind direkt anklickbar. Du kannst eine einzelne Übung auswählen oder das komplette klassische Programm starten.</p>
+          </section>
+
+          <section class="help-section safety-help">
+            <h3>✅ Sicher trainieren</h3>
+            <ul>
+              <li>Stabilen Stuhl ohne Rollen verwenden.</li>
+              <li>Leichten Widerstand wählen.</li>
+              <li>Langsam und schmerzfrei bewegen.</li>
+              <li>Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.</li>
+            </ul>
+          </section>
+
+          <section class="help-section">
+            <h3>📱 Tipp fürs iPad</h3>
+            <p>In Safari: <b>Teilen → Zum Home-Bildschirm</b>. Danach startet die App wie eine normale Anwendung.</p>
+          </section>
+        </div>
+
+        <button id="helpCloseBottomBtn" class="primary-btn wide" type="button">Verstanden – weiter trainieren</button>
+      </div>
+    </div>
+
+    <div id="settingsPanel" class="modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="modal-head">
+          <h2 id="settingsTitle">Automatik</h2>
+          <button id="closeSettingsBtn" class="icon-btn" type="button" aria-label="Schließen">×</button>
+        </div>
+        <label class="setting-row">
+          <input type="radio" name="timingMode" value="fixed" checked />
+          <span><strong>2 Minuten je Übung</strong><small>Standard für die automatische Folge.</small></span>
+        </label>
+        <label class="setting-row">
+          <input type="radio" name="timingMode" value="plan" />
+          <span><strong>Originale Planzeiten</strong><small>Nur beim klassischen 8er-Programm: 1–2 Min. je Übung.</small></span>
+        </label>
+        <label class="toggle-row">
+          <input id="soundToggle" type="checkbox" checked />
+          <span>Signalton beim Übungswechsel</span>
+        </label>
+        <p class="modal-note">Für 5-/10-/15-Minuten-Programme wird die letzte Übung bei Bedarf verkürzt, damit die Gesamtdauer genau passt.</p>
+      </div>
+    </div>
+
+    <div id="donePanel" class="modal" hidden>
+      <div class="modal-card done-card" role="dialog" aria-modal="true" aria-labelledby="doneTitle">
+        <div class="done-icon">✓</div>
+        <h2 id="doneTitle">Geschafft!</h2>
+        <p id="doneText">Das Morgenprogramm ist beendet.</p>
+        <button id="doneOverviewBtn" class="primary-btn" type="button">Zur Übersicht</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
