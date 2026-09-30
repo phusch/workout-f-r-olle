@@ -13,10 +13,11 @@ Die App kombiniert klassische Stuhl-Tai-Chi-Bewegungen mit einfachen Kräftigung
 
 **Enthalten sind:**
 
-- 18 Übungen für den ganzen Körper
+- 28 Übungen für den ganzen Körper
 - klassische Stuhl-Tai-Chi-Bewegungen
 - Übungen für Rücken, Schulter & Nacken, Beine & Hüfte
 - Beweglichkeits- und Aktivierungsübungen
+- **10 Master-Yoga-Übungen** mit und ohne Stuhl, ausschließlich für Beweglichkeit
 - Übungen mit Theraband und leichten Hanteln
 - automatischer Wechsel zur nächsten Übung
 - Pausen-, Zurück- und Weiter-Funktion
@@ -59,6 +60,9 @@ Für Rotation, Seitneigung, Hüftöffnung und lockere Gelenkbewegung.
 
 ### 🟦 Aktivierung
 Für Kreislauf, Koordination, Rumpfspannung und einen aktiveren Start in den Tag.
+
+### 🧘 Master Yoga
+10 zusätzliche Übungen mit und ohne Stuhl. Der Fokus liegt ausschließlich auf Mobilität, Dehnung und Beweglichkeit von Wirbelsäule, Schultern, Hüften, Flanken und Beinrückseiten. Über den Programmgenerator sind 5, 10 oder 15 Minuten möglich; das komplette Master-Yoga-Programm dauert 20 Minuten.
 
 ---
 
@@ -126,6 +130,7 @@ Du kannst daher entweder:
 - Bewegungen **langsam, kontrolliert und schmerzfrei** ausführen.
 - Schultern locker lassen und ruhig weiteratmen.
 - Bei Theraband und Hanteln mit **leichtem Widerstand** beginnen.
+- Bei stehenden Yogaübungen den Stuhl bei Bedarf als Balancehilfe nutzen.
 - Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.
 
 Die App ersetzt keine medizinische oder physiotherapeutische Beratung.
@@ -173,15 +178,16 @@ Oben rechts findest du neben **⚙︎ Einstellungen** jetzt den Button **?**. Do
 
 ## 🧩 Version
 
-**Stuhl Thai Chi V1.1.2 · Everlast Edition**
+**Stuhl Thai Chi V1.2.0 · Everlast Edition**
 
 Neu in dieser Version:
 
-- Bedienungsanleitung als `README.md`
-- integrierte Hilfe direkt in der App
-- bestehende Trainingslogik unverändert
-- bestehende 18 Übungen unverändert
-- bestehender Startbildschirm unverändert
+- **10 Master-Yoga-Übungen** als Übungen 19–28
+- neuer Bereich **Master Yoga** im Programmgenerator
+- kompletter 20-Minuten-Yoga-Ablauf per Direktstart
+- Master Yoga wird auch unter **Beweglichkeit** berücksichtigt
+- Hilfe und README um Master Yoga erweitert
+- bestehende 18 Übungen, Startbildschirm und Grundlogik bleiben erhalten
 
 ---
 

@@ -17,6 +17,7 @@
     <section id="introView" class="view active intro-view" aria-label="Startbildschirm">
       <button id="introStartBtn" class="intro-touch" type="button" aria-label="App starten">
         <img src="assets/startbild.png" alt="Startbildschirm von Stuhl Thai Chi" class="intro-image" />
+        <span class="intro-yoga-badge">NEU · 28 Übungen · 10 Master Yoga</span>
         <span class="intro-cta">Zum Start antippen</span>
       </button>
     </section>
@@ -25,7 +26,7 @@
       <header class="topbar">
         <div>
           <div class="brand">Stuhl Thai Chi</div>
-          <div class="subline">Morgenprogramm · V1.1.2 · Everlast Edition · 18 Übungen</div>
+          <div class="subline">Morgenprogramm · V1.2.0 · Everlast Edition · 28 Übungen</div>
         </div>
         <div class="top-actions">
           <button class="icon-btn" id="helpBtn" type="button" aria-label="Bedienungsanleitung">?</button>
@@ -51,6 +52,7 @@
             <button class="choice-card" type="button" data-target="legs"><span class="choice-icon">↥</span><strong>Beine & Hüfte</strong><small>Stabilität · Alltag</small></button>
             <button class="choice-card" type="button" data-target="mobility"><span class="choice-icon">∞</span><strong>Beweglichkeit</strong><small>Dehnung · Mobilität</small></button>
             <button class="choice-card" type="button" data-target="activation"><span class="choice-icon">♥</span><strong>Aktivierung</strong><small>Kreislauf · Energie</small></button>
+            <button class="choice-card yoga-choice" type="button" data-target="yoga"><span class="choice-icon">🧘</span><strong>Master Yoga</strong><small>10 Übungen · Beweglichkeit</small></button>
           </div>
         </div>
 
@@ -103,18 +105,36 @@
         </div>
       </section>
 
+      <section class="library-section master-yoga-section" aria-labelledby="yogaTitle">
+        <div class="section-head mini-head">
+          <div>
+            <div class="yoga-kicker">MASTER YOGA · NEU</div>
+            <h2 id="yogaTitle">10 Übungen nur für Beweglichkeit</h2>
+            <p>Mit und ohne Stuhl: Wirbelsäule, Schultern, Hüfte, Flanken und Beinrückseiten sanft mobilisieren und dehnen.</p>
+          </div>
+          <span class="pill yoga-pill">10 Übungen</span>
+        </div>
+        <div class="yoga-feature-grid">
+          <span>🪑 7 Übungen mit Stuhl</span>
+          <span>🧘 3 Übungen im Stand</span>
+          <span>∞ Fokus Beweglichkeit</span>
+        </div>
+        <button id="startYogaProgramBtn" class="primary-btn wide yoga-start-btn" type="button">▶ Master Yoga komplett starten · 20 Min.</button>
+        <p class="yoga-small">Für kürzere Yoga-Einheiten oben „Master Yoga“ wählen und 5, 10 oder 15 Minuten einstellen.</p>
+      </section>
+
       <section class="library-section" aria-labelledby="libraryTitle">
         <div class="section-head mini-head">
           <div>
             <h2 id="libraryTitle">Alle Übungen</h2>
-            <p>18 Übungen – davon 10 neu mit Theraband, Hanteln oder zusätzlicher Kräftigung.</p>
+            <p>28 Übungen – inklusive 10 neuer Master-Yoga-Übungen ausschließlich für Beweglichkeit.</p>
           </div>
         </div>
         <div id="exerciseLibrary" class="exercise-library"></div>
       </section>
 
       <aside class="safety-note">
-        <strong>Sicher trainieren:</strong> stabilen Stuhl ohne Rollen verwenden, Widerstand leicht wählen, langsam und schmerzfrei bewegen. Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.
+        <strong>Sicher trainieren:</strong> stabilen Stuhl ohne Rollen verwenden, Widerstand leicht wählen, langsam und schmerzfrei bewegen. Bei stehenden Yogaübungen den Stuhl bei Bedarf als sichere Stütze nutzen. Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.
       </aside>
     </section>
 
@@ -152,8 +172,8 @@
         <div class="detail-grid">
           <section><h3>So geht’s</h3><ol id="detailSteps"></ol></section>
           <section><h3>Worauf achten</h3><ul id="detailFocus"></ul></section>
-          <section><h3>Stärkt</h3><ul id="detailStrengthens"></ul></section>
-          <section><h3>Mobilisiert / dehnt</h3><ul id="detailMobilizes"></ul></section>
+          <section><h3 id="detailStrengthTitle">Stärkt</h3><ul id="detailStrengthens"></ul></section>
+          <section><h3 id="detailMobilityTitle">Mobilisiert / dehnt</h3><ul id="detailMobilizes"></ul></section>
         </div>
       </article>
 
@@ -196,8 +216,13 @@
             <h3>🎯 Trainingsbereiche</h3>
             <div class="help-chip-grid">
               <span>◎ Ganzkörper</span><span>↟ Rücken</span><span>⌁ Schulter & Nacken</span>
-              <span>↥ Beine & Hüfte</span><span>∞ Beweglichkeit</span><span>♥ Aktivierung</span>
+              <span>↥ Beine & Hüfte</span><span>∞ Beweglichkeit</span><span>♥ Aktivierung</span><span>🧘 Master Yoga</span>
             </div>
+          </section>
+
+          <section class="help-section yoga-help">
+            <h3>🧘 Master Yoga</h3>
+            <p>10 zusätzliche Übungen dienen ausschließlich der Beweglichkeit. Wähle oben <b>Master Yoga</b> für eine 5-, 10- oder 15-Minuten-Auswahl oder starte das komplette 10er-Programm mit 20 Minuten.</p>
           </section>
 
           <section class="help-section">
@@ -224,6 +249,7 @@
             <h3>✅ Sicher trainieren</h3>
             <ul>
               <li>Stabilen Stuhl ohne Rollen verwenden.</li>
+              <li>Bei stehenden Yogaübungen den Stuhl bei Bedarf zur Balance nutzen.</li>
               <li>Leichten Widerstand wählen.</li>
               <li>Langsam und schmerzfrei bewegen.</li>
               <li>Bei Schwindel, ungewöhnlicher Atemnot oder Schmerzen abbrechen.</li>
